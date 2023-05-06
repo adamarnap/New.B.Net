@@ -67,6 +67,7 @@
           <li><a class="nav-link scrollto active" href="#">Produk</a></li>
           <li><a class="nav-link scrollto " href="Frontend/Tentang_Kami/Tentang_Kami.php">Tentang Kami</a></li>
           <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
+          <li><a class="nav-link scrollto" href="Kirim_bukti_bayar.php">Kirim Bukti Pembayaran</a></li>
           
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -111,7 +112,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form  method="post" role="form" >
+            <form  method="post" action="Konfirmasi_bayar.php" role="form" >
               <div class="row">
                 <div class="col-md-6 form-group">
                     <label for="">Nama Lengkap</label>
@@ -123,9 +124,11 @@
                   <input type="email" class="form-control" name="email" id="email" placeholder="Isikan Email Anda di Sini" required>
                 </div>
 
-                <input type="hidden" class="form-control" name="nominal_paket" value="<?php echo $paket['nama_paket']?>" id="nominal_paket" >
+                <input type="hidden" class="form-control" name="nama_paket" value="<?php echo $paket['nama_paket'];?>">
+                
+                <input type="hidden" class="form-control" name="id_paket" value="<?php echo $_GET['id_paket'];?>" >
 
-                <input type="hidden" class="form-control" name="harga_paket" value="<?php echo $paket['harga']?>" id="harga_paket" >
+                <input type="hidden" class="form-control" name="harga_paket" value="<?php echo $paket['harga'];?>" id="harga_paket" >
 
               </div>
 
@@ -138,8 +141,12 @@
                 <textarea class="form-control" name="alamat" rows="3" placeholder="Isikan Alamat Lengkap Anda di Sini" required></textarea>
               </div>
 
-              <div style='margin-top:10px;' class="text-center">
+              <!-- <div style='margin-top:10px;' class="text-center">
                 <button name="beli" type="submit" class="btn btn-danger">Beli Paket</button>
+              </div> -->
+              <div style='margin-top:10px;' class="text-center">
+                <input name="beli" type="submit" value="Beli Paket" class="btn btn-danger">
+                <!--  -->
               </div>
             </form>
             <?php  } ?>

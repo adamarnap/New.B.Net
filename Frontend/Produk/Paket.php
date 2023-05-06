@@ -60,7 +60,8 @@
           <li><a class="nav-link" href="../../dashboard.php">Beranda</a></li>
           <li><a class="nav-link scrollto active" href="#">Produk</a></li>
           <li><a class="nav-link scrollto " href="../Tentang_Kami/Tentang_Kami.php">Tentang Kami</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Info</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
+          <li><a class="nav-link scrollto" href="Kirim_bukti_bayar.php">Kirim Bukti Pembayaran</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -103,13 +104,14 @@
         <?php foreach($result as $paket) { ?>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxs-tachometer"></i></div>
-              <h4><a href="<?php echo ('Beli_Paket.php?id_paket='.$paket['id_paket']);?>"><?php echo $paket['nama_paket']?></a></h4>
-              <p><b><?php echo 'Rp. '?><?php echo number_format ($paket['harga'],0,",",".")?>/Bulan</b></p>
-              <p><?php echo $paket['keterangan_paket']?></p>
-
-            </div>
+            <a href="<?php echo ('Beli_Paket.php?id_paket='.$paket['id_paket']);?>">  
+                <div class="icon-box">
+                  <div class="icon"><i class="bx bxs-tachometer"></i></div>
+                  <h4><?php echo $paket['nama_paket']?></h4>
+                  <p><b><?php echo 'Rp. '?><?php echo number_format ($paket['harga'],0,",",".")?>/Bulan</b></p>
+                  <p><?php echo $paket['keterangan_paket']?></p>
+                </div>
+            </a>
           </div>
           <?php } ?>
         </div>

@@ -52,6 +52,7 @@
           <li><a class="nav-link scrollto" href="Frontend/Produk/Paket.php">Produk</a></li>
           <li><a class="nav-link scrollto " href="Frontend/Tentang_Kami/Tentang_Kami.php">Tentang Kami</a></li>
           <li><a class="nav-link scrollto" href="Frontend/Info/Info.php">Info</a></li>
+          <li><a class="nav-link scrollto" href="Frontend/Produk/Kirim_bukti_bayar.php">Kirim Bukti Pembayaran</a></li>
           
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
