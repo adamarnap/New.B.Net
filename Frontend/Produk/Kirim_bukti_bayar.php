@@ -212,7 +212,7 @@
     
                     $query_file = $koneksi->query("
                     UPDATE tb_pembelian SET
-                        status_pembelian = '1',
+                        status_pembelian = '2',
                         tgl_bayar = '$tgl_bayar',
                         bukti_bayar = '$namaFile'
                     WHERE invoice = '$no_invoice'

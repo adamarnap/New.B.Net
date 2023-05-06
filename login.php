@@ -117,12 +117,14 @@
 			$sql = $koneksi->query("select * from tb_user where username='$username' and password='$pass'");
 			$data = $sql->fetch_assoc();
 			$ketemu = $sql->num_rows;
+      var_dump($data['level']);
 
 			if ($ketemu >=1) {
 				session_start();
 				if ($data['level']=="admin") {
 					$_SESSION['admin'] = $data['id'];
 					header("location:index.php");
+          
 				}
 				else if ($data['level']=="user") {
 					$_SESSION['user'] = $data['id'];

@@ -151,11 +151,11 @@
                 $array_metode_bayar = explode("-",$metode_pembayaran);
               ?>
             
-            <input type="hidden" class="form-control" name="bank_bayar" id="bank_bayar" value="<?php echo $array_metode_bayar[0];?>"  >
-            <input type="hidden" class="form-control" name="va_bayar" id="va_bayar" value="<?php echo $array_metode_bayar[1];?>"  >
-            <input type="hidden" class="form-control" name="id_paket" id="id_paket" value="<?php echo $_POST['id_paket'];?>"  >
-            <input type="hidden" class="form-control" name="nama_paket" value="<?php echo $paket?>" id="nama_paket" >
-            <input type="hidden" class="form-control" name="harga_paket" value="<?php echo $harga?>" id="harga_paket" >
+              <input type="hidden" class="form-control" name="bank_bayar" id="bank_bayar" value="<?php echo $array_metode_bayar[0];?>"  >
+              <input type="hidden" class="form-control" name="va_bayar" id="va_bayar" value="<?php echo $array_metode_bayar[1];?>"  >
+              <input type="hidden" class="form-control" name="id_paket" id="id_paket" value="<?php echo $_POST['id_paket'];?>"  >
+              <input type="hidden" class="form-control" name="nama_paket" value="<?php echo $paket?>" id="nama_paket" >
+              <input type="hidden" class="form-control" name="harga_paket" value="<?php echo $harga?>" id="harga_paket" >
 
                 <div class=" form-group mt-3">
                     <label for="">Nama Lengkap</label>

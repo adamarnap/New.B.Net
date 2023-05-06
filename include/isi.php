@@ -147,7 +147,14 @@
 
 
 
-
+		if($page == "metode_bayar"){
+			if ($aksi == "") {
+				include "page/metode_bayar/index.php";
+			}			
+			if ($aksi == "hapus") {
+				include "page/metode_bayar/hapus.php";
+			}			
+		}
 
 
 

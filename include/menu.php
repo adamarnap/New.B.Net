@@ -54,6 +54,7 @@
                 <li class="<?php echo $aktifA2; ?>"><a href="?page=paket"><i class="fa fa-circle-o"></i> Data Paket</a></li>
                 <li class="<?php echo $aktifPembelian;?>"><a href="?page=pembelian"><i class="fa fa-circle-o"></i> Data Pembelian</a></li>
                 <li class="<?php echo $aktifA4; ?>"><a href="?page=pelanggan"><i class="fa fa-circle-o"></i> Data Pelanggan</a></li>
+                <li class="<?php echo $aktifA5; ?>"><a href="?page=metode_bayar"><i class="fa fa-circle-o"></i> Data Metode Pembayaran</a></li>
               </ul>
             </li>
 

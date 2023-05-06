@@ -22,7 +22,7 @@ ob_start();
         $jenis_id = $_POST['jenis_identitas'];
         $no_identitas = $_POST['no_identitas'];
         $tgl_lahir = $_POST['tgl_lahir'];
-        $metode_bayar = $_POST['metode_bayar'];
+        // $metode_bayar = $_POST['metode_bayar'];
         $tgl_installasi = $_POST['tgl_installasi'];
         $va_bayar = $_POST['va_bayar'];
         $bank_bayar = $_POST['bank_bayar'];
