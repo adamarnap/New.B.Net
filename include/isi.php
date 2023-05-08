@@ -194,6 +194,24 @@
 			}
 		}
 
+		if ($page == "info") {
+			if ($aksi == "") {
+				include "page/info/index.php";
+			}
+
+			if ($aksi == "tambah") {
+				include "page/info/tambah.php";	
+			}
+
+			if ($aksi == "ubah") {
+				include "page/info/ubah.php";
+			}
+
+			if ($aksi == "hapus") {
+				include "page/info/hapus.php";
+			}
+		}
+
 
 		if ($page == "kas") {
 			if ($aksi == "") {
