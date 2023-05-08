@@ -181,8 +181,8 @@
 				include "page/pembelian/pembelian.php";
 			}
 
-			if ($aksi == "tambah") {
-				include "page/pembelian/tambah.php";
+			if ($aksi == "tambah_pembelian") {
+				include "page/pembelian/tambah_pembelian.php";	
 			}
 
 			if ($aksi == "ubah") {

@@ -198,6 +198,7 @@
             // Extensi FILE
             $extFileAllowed = array('pdf', 'png', 'jpg', 'jpeg');
             $x        = explode('.', $namaFile);
+            $namaFileFix= $x[0].'-'.$no_invoice.'.'.strtolower(end($x));
             $ekstensi    = strtolower(end($x));
     
             // UKuran File
@@ -208,13 +209,13 @@
     
             if (in_array($ekstensi,$extFileAllowed)===true) {
                 if ($ukuran < 1044070) {
-                    move_uploaded_file($namaSementara, $dirupload.$namaFile);
+                    move_uploaded_file($namaSementara, $dirupload.$namaFileFix);
     
                     $query_file = $koneksi->query("
                     UPDATE tb_pembelian SET
                         status_pembelian = '2',
                         tgl_bayar = '$tgl_bayar',
-                        bukti_bayar = '$namaFile'
+                        bukti_bayar = '$namaFileFix'
                     WHERE invoice = '$no_invoice'
                     ");
     
