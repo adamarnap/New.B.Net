@@ -16,6 +16,24 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`tagihan_internet` /*!40100 DEFAULT CHAR
 
 USE `tagihan_internet`;
 
+/*Table structure for table `tb_info` */
+
+DROP TABLE IF EXISTS `tb_info`;
+
+CREATE TABLE `tb_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `gambar` text,
+  `judul` varchar(100) DEFAULT NULL,
+  `isi` varchar(500) DEFAULT NULL,
+  KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+/*Data for the table `tb_info` */
+
+insert  into `tb_info`(`id`,`gambar`,`judul`,`isi`) values 
+(1,'abc-qrcode(1).png','fsdfsd','ffsd'),
+(3,'Kalender-2023-Versi-PDF.jpg','info','info');
+
 /*Table structure for table `tb_kas` */
 
 DROP TABLE IF EXISTS `tb_kas`;
@@ -68,8 +86,7 @@ CREATE TABLE `tb_metode_bayar` (
 
 insert  into `tb_metode_bayar`(`id`,`nama_bank`,`virtual_acc`) values 
 (1,'BRI','087857876890876'),
-(2,'Mandiri','099876543456789'),
-(3,'BCA','099876543456555'),
+(3,'',''),
 (4,'Gopay','099876543453456');
 
 /*Table structure for table `tb_paket` */
@@ -143,50 +160,13 @@ CREATE TABLE `tb_pembelian` (
   `tgl_bayar` date DEFAULT NULL,
   `bukti_bayar` text NOT NULL,
   PRIMARY KEY (`id_pembelian`)
-) ENGINE=InnoDB AUTO_INCREMENT=122 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=166 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `tb_pembelian` */
 
 insert  into `tb_pembelian`(`id_pembelian`,`invoice`,`nama`,`nominal_paket`,`harga_paket`,`no_tlp`,`email`,`alamat`,`jenis_id`,`no_id`,`tgl_lahir`,`metode_bayar`,`tgl_installasi`,`status_pembelian`,`va_bayar`,`bank_bayar`,`tgl_bayar`,`bukti_bayar`) values 
-(83,'050523-7-1','Nata','1 Mbps','100000','085768987554','pranata@mail.com','Minomartani, Gg. Gabus, Depok, Sleman, Yogyakarta, 56745','KTP','33094345544','2023-05-04','BRI','2023-06-01','0','',NULL,NULL,'-'),
-(84,'050523-7-84','Nata','1 Mbps','100000','085768987554','pranata@mail.com','Minomartani, Gg. Gabus, Depok, Sleman, Yogyakarta, 56745','KTP','33094345544','2023-05-04','BRI','2023-06-01','0','',NULL,NULL,'-'),
-(85,'050523-7-85','Nata','1 Mbps','100000','085768987554','pranata@mail.com','Minomartani, Gg. Gabus, Depok, Sleman, Yogyakarta, 56745','KTP','33094345544','2023-05-04','BRI','2023-06-01','0','',NULL,NULL,'-'),
-(86,'050523-7-86','Nata','1 Mbps','100000','085768987554','pranata@mail.com','Minomartani, Gg. Gabus, Depok, Sleman, Yogyakarta, 56745','KTP','33094345544','2023-05-04','BRI','2023-06-01','0','',NULL,NULL,'-'),
-(87,'050523-7-87','Nata','1 Mbps','100000','085768987554','pranata@mail.com','Minomartani, Gg. Gabus, Depok, Sleman, Yogyakarta, 56745','KTP','33094345544','2023-05-04','BRI','2023-06-01','0','',NULL,NULL,'-'),
-(88,'050523-7-88','Nata','1 Mbps','100000','085768987554','pranata@mail.com','Minomartani, Gg. Gabus, Depok, Sleman, Yogyakarta, 56745','KTP','33094345544','2023-05-04','BRI','2023-06-01','0','',NULL,NULL,'-'),
-(89,'050523-7-89','Nata','1 Mbps','100000','085768987554','pranata@mail.com','Minomartani, Gg. Gabus, Depok, Sleman, Yogyakarta, 56745','KTP','33094345544','2023-05-04','BRI','2023-06-01','0','',NULL,NULL,'-'),
-(90,'050523-7-90','Nata','1 Mbps','100000','085768987554','pranata@mail.com','Minomartani, Gg. Gabus, Depok, Sleman, Yogyakarta, 56745','KTP','33094345544','2023-05-04','BRI','2023-06-01','0','',NULL,NULL,'-'),
-(91,'050523-7-91','test','1 Mbps','100000','0934304','test@mail.co','rwereertrt','KTP','4354353','2023-05-11','BRI','2023-05-26','0','',NULL,NULL,'-'),
-(92,'050523-7-92','test','1 Mbps','100000','0934304','test@mail.co','rwereertrt','KTP','4354353','2023-05-11','BRI','2023-05-26','0','',NULL,NULL,'-'),
-(93,'050523-7-93','test','1 Mbps','100000','0934304','test@mail.co','rwereertrt','KTP','4354353','2023-05-11','BRI','2023-05-26','0','',NULL,NULL,'-'),
-(94,'050523-7-94','test','1 Mbps','100000','0934304','test@mail.co','rwereertrt','KTP','4354353','2023-05-11','BRI','2023-05-26','0','',NULL,NULL,'-'),
-(95,'050523-7-95','test','1 Mbps','100000','0934304','test@mail.co','rwereertrt','KTP','4354353','2023-05-11','BRI','2023-05-26','0','',NULL,NULL,'-'),
-(96,'050523-7-96','test','1 Mbps','100000','0934304','test@mail.co','rwereertrt','KTP','4354353','2023-05-11','BRI','2023-05-26','0','',NULL,NULL,'-'),
-(97,'050523-8-97','Nata Gita Swara','2 Mbps','200000','086578434777','gitaswara@gmail.com','rewrwerwe','KTP','wrwer','2023-05-06','BRI','2023-05-06','0','',NULL,NULL,'-'),
-(98,'050523-7-98','test','1 Mbps','100000','0934304','test@mail.co','rwereertrt','KTP','4354353','2023-05-11','BRI','2023-05-26','0','',NULL,NULL,'-'),
-(99,'050523-7-99','test','1 Mbps','100000','0934304','test@mail.co','rwereertrt','KTP','4354353','2023-05-11','BRI','2023-05-26','0','',NULL,NULL,'-'),
-(100,'050523-7-100','test','1 Mbps','100000','0934304','test@mail.co','rwereertrt','KTP','4354353','2023-05-11','BRI','2023-05-26','0','',NULL,NULL,'-'),
-(101,'050523-7-101','test','1 Mbps','100000','0934304','test@mail.co','rwereertrt','KTP','4354353','2023-05-11','BRI','2023-05-26','0','',NULL,NULL,'-'),
-(102,'050523-7-102','gfhfghfg','1 Mbps','100000','646456456','hshd@g.k','dfsdfsf','KTP','retr','2023-05-05','BRI','2023-06-07','0','',NULL,NULL,'-'),
-(103,'050523-8-103','jgj','2 Mbps','200000','535435435','hfghf@r.h','errtretert','KTP','353543','2023-05-17','BRI','2023-05-25','0','',NULL,NULL,'-'),
-(104,'050523-8-104','fsdfs','2 Mbps','200000','fdsfs','april.wendi@yahoo.com','','KTP','fdsfs','2023-05-04','','2023-05-25','0','',NULL,NULL,'-'),
-(105,'050523-8-105','fsdfs','2 Mbps','200000','fdsfs','april.wendi@yahoo.com','','KTP','fdsfs','2023-05-04','','2023-05-25','0','',NULL,NULL,'-'),
-(106,'050523-8-106','fsdfs','2 Mbps','200000','fdsfs','april.wendi@yahoo.com','','KTP','fdsfs','2023-05-04','','2023-05-25','0','',NULL,NULL,'-'),
-(107,'050523-8-107','cc','2 Mbps','200000','dfsfsf','f@n.h','fsdfsdfafsd','KTP','fdsfs','2023-05-25','BRI','2023-05-18','0','',NULL,NULL,'-'),
-(108,'060523-8-108','cc','2 Mbps','200000','dfsfsf','f@n.h','fsdfsdfafsd','KTP','fdsfs','2023-05-25','BRI','2023-05-18','0','',NULL,NULL,'-'),
-(109,'060523-8-109','cc','2 Mbps','200000','dfsfsf','f@n.h','fasfdsfsdfsf','KTP','765766','2023-05-18','','2023-05-19','0','099876543456789','Mandiri',NULL,'-'),
-(110,'060523-8-110','cc','2 Mbps','200000','dfsfsf','f@n.h','fasfdsfsdfsf','KTP','765766','2023-05-18','','2023-05-19','0','099876543456789','Mandiri',NULL,'-'),
-(111,'060523-8-111','cc','2 Mbps','200000','dfsfsf','f@n.h','fasfdsfsdfsf','KTP','765766','2023-05-18','','2023-05-19','0','099876543456789','Mandiri',NULL,'-'),
-(112,'060523-8-112','cc','2 Mbps','200000','dfsfsf','f@n.h','fasfdsfsdfsf','KTP','765766','2023-05-18','','2023-05-19','0','099876543456789','Mandiri',NULL,'-'),
-(113,'060523-8-113','cc','2 Mbps','200000','dfsfsf','f@n.h','fasfdsfsdfsf','KTP','765766','2023-05-18','','2023-05-19','0','099876543456789','Mandiri',NULL,'-'),
-(114,'060523-8-114','cc','2 Mbps','200000','dfsfsf','f@n.h','fasfdsfsdfsf','KTP','765766','2023-05-18','','2023-05-19','0','099876543456789','Mandiri',NULL,'-'),
-(115,'060523-8-115','cc','2 Mbps','200000','dfsfsf','f@n.h','fasfdsfsdfsf','KTP','765766','2023-05-18','','2023-05-19','0','099876543456789','Mandiri',NULL,'-'),
-(116,'060523-8-116','cc','2 Mbps','200000','dfsfsf','f@n.h','fasfdsfsdfsf','KTP','765766','2023-05-18','','2023-05-19','0','099876543456789','Mandiri',NULL,'-'),
-(117,'060523-8-117','cc','2 Mbps','200000','dfsfsf','f@n.h','fasfdsfsdfsf','KTP','765766','2023-05-18','','2023-05-19','0','099876543456789','Mandiri',NULL,'-'),
-(118,'060523-8-118','cc','2 Mbps','200000','dfsfsf','f@n.h','fasfdsfsdfsf','KTP','765766','2023-05-18','','2023-05-19','0','099876543456789','Mandiri',NULL,'-'),
-(119,'060523-8-119','cc','2 Mbps','200000','dfsfsf','f@n.h','fasfdsfsdfsf','KTP','765766','2023-05-18','','2023-05-19','0','099876543456789','Mandiri',NULL,'-'),
-(120,'060523-8-120','cc','2 Mbps','200000','dfsfsf','f@n.h','fasfdsfsdfsf','KTP','765766','2023-05-18','','2023-05-19','1','099876543456789','Mandiri','2023-05-06','Pembayaran_belum_lunas-7.pdf'),
-(121,'060523-10-121','Pranata','4 Mbps','400000','087555432433','pranata@mail.com','Jl. Patimura, Gg. Pahlawan, No.56, Minomartani, Condong Catur, Depok, Sleman, Yogyakarta\"','KTP','330053432234','2023-05-18','','2023-05-25','1','099876543456555','BCA','2023-05-06','Pembayaran_belum_lunas.pdf');
+(164,'080523--1','Pranata Gita Swara','3 Mbps','300000','085768987554','pranata@mail.com','Karang Asem, Denpasar, Bali','value=','330984459874','2023-05-08','','2023-05-25','0','099876543453456','Gopay','2023-05-08','abc-qrcode(1).png'),
+(165,'080523--165','Adnan Dhika','1 Mbps','100000','08442343234','adnan@gmail.com','Tangerang Selatan','KTP','33450434429232','2023-05-09','','2023-05-08','1','099876543456789','Mandiri','2023-05-08','abc-qrcode-.png');
 
 /*Table structure for table `tb_profile` */
 
@@ -204,7 +184,7 @@ CREATE TABLE `tb_profile` (
 /*Data for the table `tb_profile` */
 
 insert  into `tb_profile`(`nama_perusahaan`,`alamat`,`telpon`,`website`,`kota`,`foto`) values 
-('Banjar Net','JALAN RONGGOLAW NO 25 KOTA COBA-COBA','021.090939','www.sekolah.com','Jakarta','—Pngtree—wifi vector icon_4236405.png');
+('Banjar Net','JALAN RONGGOLAW NO 25 KOTA COBA-COBA','021.090939','www.sekolah.com','Jakarta','logo_login.png');
 
 /*Table structure for table `tb_tagihan` */
 

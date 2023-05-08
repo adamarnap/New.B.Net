@@ -1,5 +1,8 @@
 {
     "require": {
         "mpdf/mpdf": "^6.1"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.5"
     }
 }
